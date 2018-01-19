@@ -1,0 +1,33 @@
+body {
+    background-color: #e3e3e3;
+    font-family: Tahoma, serif;
+}
+
+#app {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background-color: #41b883;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#app h1 {
+    font-family: "Courier New", "Tahoma", serif;
+    font-weight: bold;
+    color: #41b883;
+}
+
+#app img {
+    margin: 10px;
+}

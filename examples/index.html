@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-easy-tinymce</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div id="app">
+    <img src="logo.png">
+
+    <tinymce v-model="myModel"
+             :plugins="myPlugins" :toolbar1="myToolbar1" :toolbar2="myToolbar2"
+             :other="myOtherOptions">
+    </tinymce>
+
+    <br>
+    <button @click="getModelValue()">Get current model value</button>
+    <button @click="changeModelValue()">Change model value programmability</button>
+    <button @click="clearModelValue()">Clear model value</button>
+
+    <br><br>
+    <a target="_blank" href="https://github.com/m3esma/vue-easy-tinymce">vue-easy-tinymce</a>
+
+</div>
+
+
+<script src="tinymce/tinymce.min.js"></script> <!-- TinyMCE core -->
+<!-- Or CDN <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.4/tinymce.min.js"></script> -->
+
+<script src="vue/vue.min.js"></script> <!-- Vue.js core -->
+<!-- Or CDN <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+<script src="../dist/vue-easy-tinymce.min.js"></script> <!-- VueEasyTinyMCE module-->
+<!-- Or CDN <script src="https://cdn.jsdelivr.net/npm/vue-easy-tinymce/dist/vue-easy-tinymce.min.js"></script> -->
+
+<script src="index.js"></script> <!-- Your project js code -->
+
+
+</body>
+</html>

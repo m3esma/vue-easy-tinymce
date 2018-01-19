@@ -1,0 +1,26 @@
+{
+  "name": "vue-easy-tinymce",
+  "version": "1.0.1",
+  "description": "A simple and powerful package for easy usage of tinymce in Vue.js project.",
+  "main": "dist/vue-easy-tinymce.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m3esma/vue-easy-tinymce.git"
+  },
+  "keywords": [
+    "vue",
+    "tinymce",
+    "javascript",
+    "component",
+    "vue-component"
+  ],
+  "author": "Mehdi Esmaeili <m3esma@gmail.com> (https://github.com/m3esma/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m3esma/vue-easy-tinymce/issues"
+  },
+  "homepage": "https://github.com/m3esma/vue-easy-tinymce#readme"
+}
