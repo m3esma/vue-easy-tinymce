@@ -1,5 +1,5 @@
 /*!
- * vue-easy-tinymce v1.0.1
+ * vue-easy-tinymce v1.0.2
  * Copyright (c) 2018-present Mehdi Esmaeili (@m3esma)
  * Released under the MIT License.
  * Project: https://github.com/m3esma/vue-easy-tinymce
@@ -34,7 +34,6 @@ var VueEasyTinyMCE = {
     //template: '<div><textarea rows="10" v-bind:value="value"></textarea></div>', //inside a div
     template: '<textarea :id="computedId" :value="value"></textarea>',
 
-
     computed: {
         //for multi instance support
         computedId: function () {
@@ -57,8 +56,7 @@ var VueEasyTinyMCE = {
             plugins: this.plugins,
             init_instance_callback: function (editor) {
                 editor.on('Change KeyUp Undo Redo', function (e) {
-                    //component.updateValue(editor.getContent());
-                    component.value = editor.getContent();
+                    component.updateValue(editor.getContent());
                 });
                 //editor.setContent(component.value); //use instead :value="value"
                 //alert("init");
@@ -77,19 +75,20 @@ var VueEasyTinyMCE = {
                     .toString(16)
                     .substring(1);
             }
+
             return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
                 s4() + '-' + s4() + s4() + s4();
+        },
+        updateValue: function (value) {
+            this.$emit('input', value);
         }
     },
 
     watch: {
-        value: function(newValue, oldValue) {
-            var component = this;
+        value: function (newValue, oldValue) {
             // if v-model content change programmability
-            if(component.value !== this.objTinymce.getContent())
-                this.objTinymce.setContent(component.value);
-            else
-                component.$emit('input', newValue);
+            if (this.value !== this.objTinymce.getContent())
+                this.objTinymce.setContent(this.value);
         }
     }
 
